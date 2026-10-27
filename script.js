@@ -86,7 +86,7 @@ btn2.addEventListener("click", function(){
     if (name == "") {
         name = "Customer"
     }
-    myPara.innerHTML = name + " , your total is $" + total.toFixed(2)
+    myPara.innerHTML = name + ", your total is $" + total.toFixed(2)
 })
 
 //   b) Count checked toppings:
@@ -132,5 +132,5 @@ Clear.addEventListener("click", function(){
     }
 
     document.getElementById("serviceSelect").value = "dinein"
-    myPara.innerHTML = ""
+    document.getElementById("myPara").innerHTML = ""
 })
