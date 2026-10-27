@@ -58,9 +58,10 @@ let btn2 = document.getElementById("btnCalc")
 //      Convert to a number with parseFloat().
 btn2.addEventListener("click", function(){
     let btn3 = document.getElementsByName("rg")
+    let value = 0;
     for (let i = 0; i < btn3.length; i++) {
         if (btn3[i].checked) {
-            let value = btn3[i].value
+            value = btn3[i].value
             value = parseFloat(value)
         }
     }
@@ -85,7 +86,7 @@ btn2.addEventListener("click", function(){
     if (name == "") {
         name = "Customer"
     }
-    myPara.innerHTML = name + " , your total is " + total.toFixed(2)
+    myPara.innerHTML = name + " , your total is $" + total.toFixed(2)
 })
 
 //   b) Count checked toppings:
@@ -123,13 +124,13 @@ btn2.addEventListener("click", function(){
 //         e) Set the output paragraph innerHTML to ""
 let Clear = document.getElementById("clearBtn")
 Clear.addEventListener("click", function(){
-    myInput.input.value = ''
+    myInput.value = ""
     r3.checked = true
     let toppings = document.getElementsByName("cb")
     for (let i = 0; i < toppings.length; i++) {
         toppings[i].checked = false
     }
-    serviceSelected.value = "dinein"
-    myPara.innerHTML = ""
 
+    document.getElementById("serviceSelect").value = "dinein"
+    myPara.innerHTML = ""
 })
